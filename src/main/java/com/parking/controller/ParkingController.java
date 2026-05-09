@@ -85,6 +85,86 @@ public class ParkingController {
             dataService.updateSlot(targetSlot);
         }
 
+        return getFullDataResponse();
+    }
+
+    @PostMapping("/api/zones/create")
+    @ResponseBody
+    public Map<String, Object> createZone(@RequestBody Map<String, Object> payload) {
+        String name = (String) payload.get("name");
+        int slotCount = (Integer) payload.get("slotCount");
+        
+        List<Zone> zones = dataService.readZones();
+        String id = name.toUpperCase().replace(" ", "_");
+        // Ensure unique ID
+        String baseId = id;
+        int counter = 1;
+        while (true) {
+            boolean exists = false;
+            for (Zone z : zones) {
+                if (z.getId().equals(id)) {
+                    exists = true;
+                    break;
+                }
+            }
+            if (!exists) break;
+            id = baseId + "_" + counter++;
+        }
+        
+        Zone newZone = new Zone(id, name);
+        zones.add(newZone);
+        dataService.saveZones(zones);
+        
+        List<ParkingSlot> slots = dataService.readSlots();
+        for (int i = 1; i <= slotCount; i++) {
+            slots.add(new ParkingSlot(id + "-" + i, id + i, id, "available", "", null));
+        }
+        dataService.saveSlots(slots);
+        
+        return getFullDataResponse();
+    }
+
+    @DeleteMapping("/api/zones/{id}")
+    @ResponseBody
+    public Map<String, Object> deleteZone(@PathVariable String id) {
+        List<Zone> zones = dataService.readZones();
+        zones.removeIf(z -> z.getId().equals(id));
+        dataService.saveZones(zones);
+        
+        List<ParkingSlot> slots = dataService.readSlots();
+        slots.removeIf(s -> s.getZoneId().equals(id));
+        dataService.saveSlots(slots);
+        
+        return getFullDataResponse();
+    }
+
+    @PostMapping("/api/slots/add")
+    @ResponseBody
+    public Map<String, Object> addSlot(@RequestBody Map<String, String> payload) {
+        String zoneId = payload.get("zoneId");
+        List<ParkingSlot> slots = dataService.readSlots();
+        
+        long count = slots.stream().filter(s -> s.getZoneId().equals(zoneId)).count();
+        String number = zoneId + (count + 1);
+        String id = zoneId + "-" + System.currentTimeMillis();
+        
+        slots.add(new ParkingSlot(id, number, zoneId, "available", "", null));
+        dataService.saveSlots(slots);
+        
+        return getFullDataResponse();
+    }
+
+    @DeleteMapping("/api/slots/{id}")
+    @ResponseBody
+    public Map<String, Object> deleteSlot(@PathVariable String id) {
+        List<ParkingSlot> slots = dataService.readSlots();
+        slots.removeIf(s -> s.getId().equals(id));
+        dataService.saveSlots(slots);
+        
+        return getFullDataResponse();
+    }
+
+    private Map<String, Object> getFullDataResponse() {
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
         response.put("zones", dataService.readZones());

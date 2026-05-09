@@ -1,12 +1,11 @@
 A-1|A1|A|available||
 A-2|A2|A|available||
-A-3|A3|A|available||
+A-3|A3|A|occupied||BAC-3356;Hatchback;Shaham;+94 784442920;it25103969@my.sliit.lk;12:22 AM;0h 0m
 A-4|A4|A|available||
 A-5|A5|A|available||
 A-6|A6|A|available||
 A-7|A7|A|available||
-A-8|A8|A|available||
-A-9|A9|A|available||
+A-9|A9|A|occupied||BAC-3356;Sedan;BatMan;+94 784442920;it25103969@my.sliit.lk;12:23 AM;0h 0m
 A-10|A10|A|available||
 A-11|A11|A|available||
 A-12|A12|A|available||
@@ -29,7 +28,7 @@ A-28|A28|A|available||
 A-29|A29|A|available||
 A-30|A30|A|available||
 B-1|B1|B|available||
-B-2|B2|B|reserved|staff|
+B-2|B2|B|available||
 B-3|B3|B|available||
 B-4|B4|B|available||
 B-5|B5|B|available||
