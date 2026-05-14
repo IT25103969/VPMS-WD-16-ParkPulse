@@ -1,8 +1,6 @@
 package repository;
 
 import model.ProblemReport;
-import org.springframework.security.core.parameters.P;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +37,7 @@ public class ProblemReportRepository {
 
     public List<ProblemReport> findByUserId(Long userId){
         return storage.values().stream()
-                .filter(r -> r.getUserID().equals(userId))
+                .filter(r -> r.getUserId().equals(userId))
                 .sorted((a, b) -> b.getReportedAt().compareTo(a.getReportedAt()))
                 .collect(Collectors.toList());
     }

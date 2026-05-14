@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class ProblemReport {
     private Long id;
-    private Long userID;
+    private Long userId;
     private String userName;
     private String issueType;
     private String description;
@@ -19,12 +19,13 @@ public class ProblemReport {
     public ProblemReport() {
     }
 
-    public ProblemReport(Long userID, String issueType, String description, String priority, String status, LocalDateTime reportedAt) {
-        this.userID = userID;
+    public ProblemReport(Long userId, String userName, String issueType, String description) {
+        this.userId = userId;
+        this.userName = userName;
         this.issueType = issueType;
         this.description = description;
-        this.priority = "Medium";
-        this.status = "Pending";
+        this.priority = "MEDIUM";
+        this.status = "PENDING";
         this.reportedAt = LocalDateTime.now();
     }
 
@@ -32,8 +33,8 @@ public class ProblemReport {
         return id;
     }
 
-    public Long getUserID() {
-        return userID;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getUserName() {
@@ -76,8 +77,8 @@ public class ProblemReport {
         this.id = id;
     }
 
-    public void setUserID(Long userID) {
-        this.userID = userID;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public void setUserName(String userName) {
