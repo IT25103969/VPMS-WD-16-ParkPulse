@@ -13,4 +13,14 @@ public class PageController {
     public String myReports() {
         return "my-reports";
     }
+
+    @GetMapping("/report-details")
+    public String reportDetails() {
+        return "report-details";
+    }
+
+    @GetMapping("/track-status")
+    public String trackStatus() {
+        return "track-status";
+    }
 }
