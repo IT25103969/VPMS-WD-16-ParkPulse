@@ -1,5 +1,0 @@
-1|C01|false|CAR
-2|C02|false|CAR
-3|C03|false|CAR
-4|M01|false|MOTORBIKE
-5|M02|false|MOTORBIKE
