@@ -1,6 +1,0 @@
-com\parking\model\Zone.class
-com\parking\controller\ParkingController.class
-com\parking\ParkingApplication.class
-com\parking\model\ParkingSlot$Vehicle.class
-com\parking\model\ParkingSlot.class
-com\parking\service\DataService.class
