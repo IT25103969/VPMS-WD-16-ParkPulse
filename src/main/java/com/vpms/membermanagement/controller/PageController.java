@@ -21,4 +21,9 @@ public class PageController {
     public String members() {
         return "members";
     }
+
+    @GetMapping("/analytics")
+    public String analytics() {
+        return "analytics";
+    }
 }

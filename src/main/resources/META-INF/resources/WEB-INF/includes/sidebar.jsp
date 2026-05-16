@@ -28,9 +28,15 @@
         </a>
 
         <a href="/members" class="flex items-center rounded-lg text-sm w-full text-left transition-colors"
-           :class="[$store.app.sidebarCollapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5', $store.app.activePage === 'members' ? 'bg-blue-600 text-white' : ($store.app.isDark ? 'text-gray-400 hover:bg-white/5 hover:text-white' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800')]">
+           :class="[$store.app.sidebarCollapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5', ($store.app.activePage === 'members') ? 'bg-blue-600 text-white' : ($store.app.isDark ? 'text-gray-400 hover:bg-white/5 hover:text-white' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800')]">
             <i data-lucide="users" class="size-4"></i>
             <span x-show="!$store.app.sidebarCollapsed" x-transition class="truncate">Members</span>
+        </a>
+
+        <a href="/analytics" class="flex items-center rounded-lg text-sm w-full text-left transition-colors"
+           :class="[$store.app.sidebarCollapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5', $store.app.activePage === 'membership-analytics' ? 'bg-blue-600 text-white' : ($store.app.isDark ? 'text-gray-400 hover:bg-white/5 hover:text-white' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800')]">
+            <i data-lucide="bar-chart-2" class="size-4"></i>
+            <span x-show="!$store.app.sidebarCollapsed" x-transition class="truncate">Analytics</span>
         </a>
     </nav>
 </aside>
