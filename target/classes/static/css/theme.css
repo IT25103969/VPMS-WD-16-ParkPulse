@@ -1,0 +1,63 @@
+<%-- theme.css --%>
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #030213;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --ring: #9ca3af;
+  --radius: 0.625rem;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: #f9fafb;
+  --sidebar-accent: #f3f4f6;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #9ca3af;
+}
+
+.dark {
+  --background: #0b1220;
+  --foreground: #f9fafb;
+  --card: #111a2e;
+  --card-foreground: #f9fafb;
+  --popover: #111a2e;
+  --popover-foreground: #f9fafb;
+  --primary: #f9fafb;
+  --primary-foreground: #111a2e;
+  --secondary: #1a2540;
+  --secondary-foreground: #f9fafb;
+  --muted: #1a2540;
+  --muted-foreground: #9ca3af;
+  --accent: #1a2540;
+  --accent-foreground: #f9fafb;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #f87171;
+  --border: #1f2a44;
+  --input: #1a2540;
+  --ring: #374151;
+  --sidebar: #111a2e;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #f9fafb;
+  --sidebar-accent: #1a2540;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: #1f2a44;
+  --sidebar-ring: #374151;
+}
