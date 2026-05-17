@@ -1,0 +1,6 @@
+TKT-002,XY 456 ZA,Jane Smith,B7,2026-05-14T09:00:00,,30.0,ongoing,SUV,Card
+TKT-005,OP 654 QR,David Lee,A22,2026-05-14T10:15:00,,20.0,ongoing,Car,Cash
+TKT-007,UV 555 XY,Sarah Parker,B15,2026-05-17T01:00:00,,10.0,ongoing,SUV,Card
+TKT-008,MN 888 OP,Robert Ross,C10,2026-05-17T01:15:00,,10.0,ongoing,Car,Cash
+TKT-009,ZA 999 BC,Alice Wong,A5,2026-05-17T01:30:00,,10.0,ongoing,Motorcycle,Mobile
+TKT-010,QR 777 ST,James Bond,B2,2026-05-17T01:45:00,,10.0,ongoing,Car,Card
