@@ -41,25 +41,25 @@ public abstract class Vehicle {
  */
 class Car extends Vehicle {
     public Car(String plate) { super(plate, "Car"); }
-    @Override public double getHourlyRate() { return 10.0; }
+    @Override public double getHourlyRate() { return 300.0; }
 }
 
 class SUV extends Vehicle {
     public SUV(String plate) { super(plate, "SUV"); }
-    @Override public double getHourlyRate() { return 15.0; }
+    @Override public double getHourlyRate() { return 300.0; }
 }
 
 class Motorcycle extends Vehicle {
     public Motorcycle(String plate) { super(plate, "Motorcycle"); }
-    @Override public double getHourlyRate() { return 5.0; }
+    @Override public double getHourlyRate() { return 200.0; }
 }
 
 class Truck extends Vehicle {
     public Truck(String plate) { super(plate, "Truck"); }
-    @Override public double getHourlyRate() { return 20.0; }
+    @Override public double getHourlyRate() { return 400.0; }
 }
 
 class Van extends Vehicle {
     public Van(String plate) { super(plate, "Van"); }
-    @Override public double getHourlyRate() { return 12.0; }
+    @Override public double getHourlyRate() { return 300.0; }
 }
