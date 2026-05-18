@@ -1,3 +1,0 @@
-Monthly,1500
-Quarterly,4000
-Annual,15000
