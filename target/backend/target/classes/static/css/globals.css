@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-med);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-sub);
+}
+
+/* Fix for dropdown coloring issues in all modes */
+select {
+  background-color: var(--input-bg);
+  color: var(--text);
+  color-scheme: inherit; /* Inherit color-scheme so OS popup matches the theme */
+}
+
+select option {
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+/* Dark mode: force explicit colors on select/option so the OS dropdown popup is readable */
+.dark select {
+  background-color: #252b3d;
+  color: #e4eaff;
+  color-scheme: dark;
+}
+
+.dark select option {
+  background-color: #1f2637;
+  color: #e4eaff;
+}
+
